@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('HP');
-            $table->string('FirstSKill', 200);
+            $table->string('FirstSkill', 200);
             $table->string('Weakness', 200)->nullable();
             $table->integer('Rating');
             $table->boolean('Got')->default(true);
