@@ -10,7 +10,6 @@ class PokemonCardController extends Controller
     public function all(Request $request)
     {
 
-
         $search = $request->search;
 
         if ($search) {
@@ -21,7 +20,7 @@ class PokemonCardController extends Controller
 
         if ($request->sort === 'asc') {
             return PokemonCard::orderBy('name', 'asc')->get();
-        } else if ($request->sort === 'desc') {
+        } elseif ($request->sort === 'desc') {
             return PokemonCard::orderBy('name', 'desc')->get();
         }
 
@@ -146,5 +145,4 @@ class PokemonCardController extends Controller
             'message' => 'deleted',
         ], 200);
     }
-
 }

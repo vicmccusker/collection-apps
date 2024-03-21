@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\PokemonCard;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\PokemonCard>
+ * @extends Factory<PokemonCard>
  */
 class PokemonCardFactory extends Factory
 {
@@ -21,8 +22,8 @@ class PokemonCardFactory extends Factory
             'HP' => $this->faker->numberBetween(1, 200),
             'FirstSkill' => $this->faker->sentence(3),
             'Weakness' => $this->faker->sentence(3),
-            'Rating' => $this->faker->numberBetween(1,10),
-            'Got' => $this->faker->boolean(50)
+            'Rating' => $this->faker->numberBetween(1, 10),
+            'Got' => $this->faker->boolean(50),
         ];
     }
 }
