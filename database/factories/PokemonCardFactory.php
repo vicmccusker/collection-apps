@@ -20,8 +20,8 @@ class PokemonCardFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'HP' => $this->faker->numberBetween(1, 200),
-            'FirstSkill' => $this->faker->sentence(3),
-            'Weakness' => $this->faker->sentence(3),
+            'FirstSkill' => 'Test',
+            'Weakness' => $this->faker->sentence(1),
             'Rating' => $this->faker->numberBetween(1, 10),
             'Got' => $this->faker->boolean(50),
         ];

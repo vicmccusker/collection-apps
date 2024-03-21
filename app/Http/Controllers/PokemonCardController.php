@@ -49,7 +49,7 @@ class PokemonCardController extends Controller
             'FirstSkill' => 'required|max:255|string',
             'Weakness' => 'required|max:255|string',
             'Rating' => 'required|integer',
-            'Got' => 'required|boolean',
+            'Got' => 'required|integer',
         ]);
 
         $cards = new PokemonCard();
@@ -86,7 +86,7 @@ class PokemonCardController extends Controller
 
             'name' => 'max:255|string',
             'HP' => 'integer',
-            'FirstSKill' => 'max:255|string',
+            'FirstSkill' => 'max:255|string',
             'Weakness' => 'max:255|string',
             'Rating' => 'integer',
             'Got' => 'boolean',
