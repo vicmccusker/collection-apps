@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\PokemonCard>
  */
-class PokemonCardsFactory extends Factory
+class PokemonCardFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,12 @@ class PokemonCardsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'HP' => $this->faker->numberBetween(1, 200),
+            'FirstSkill' => $this->faker->sentence(3),
+            'Weakness' => $this->faker->sentence(3),
+            'Rating' => $this->faker->numberBetween(1,10),
+            'Got' => $this->faker->boolean(50)
         ];
     }
 }
